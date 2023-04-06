@@ -15,9 +15,9 @@ prompt = TTY::Prompt.new
 system "clear"
 
 # welcome
-system "figlet -f slant tilde.club"
+system "toilet -F gay -f script tilde.fur"
 puts
-puts "welcome to tilde.club!!"
+puts "welcome to tilde.fur!!"
 puts
 puts "we're glad you're here!"
 puts "let's walk through some basic questions to get you set up"
@@ -122,8 +122,8 @@ open("#{Dir.home}/.profile", "a") { |f| f.puts "export TZ='#{tz}'" }
 # email forwarding
 sep
 puts "step 6:"
-puts "  tilde.club has a standard mailserver that you can use to send"
-puts "  and receive mail using #{Etc.getlogin}@tilde.club"
+puts "  tilde.fur has a standard mailserver that you can use to send"
+puts "  and receive mail using #{Etc.getlogin}@tilde.fur"
 puts
 
 if prompt.yes?("  would you like to forward your mail elsewhere?")
@@ -139,8 +139,8 @@ if prompt.yes?("  would you like to forward your mail elsewhere?")
 else
   puts "  alright, your mail won't be forwarded anywhere."
   puts "  you can use any standard mail client with smtp and imap"
-  puts "  to access your @tilde.club email"
-  puts "  see the wiki page for more information: https://tilde.club/wiki/email.html"
+  puts "  to access your @tilde.fur email"
+  puts "  see the wiki page for more information: https://tilde.fur/wiki/email.html"
   puts
   puts "  if you decide to forward your mail in the future, you can do so"
   puts "  by putting the destination address in a file called ~/.forward"
@@ -148,17 +148,7 @@ else
 end
 puts
 
-# 2fa
 sep
-puts "step 7:"
-puts "  tilde.club supports two factor authentication."
-if prompt.yes?("would you like to set up 2fa now?")
-  system "setup-2fa"
-else
-  puts "  if you change your mind or need to make changes you can run"
-  puts "  the 'setup-2fa' command"
-  puts "  for additional info, see the wiki: https://tilde.club/wiki/2fa.html"
-end
 puts
 
 # pronouns
@@ -171,11 +161,11 @@ open("#{Dir.home}/.pronouns", "w") { |f| f.puts pronouns }
 
 # welcome completed
 sep
-puts "welcome to the ~club!"
+puts "welcome to the ~fur!"
 puts
 puts "please come stop by chat when you get a chance by running the 'chat' command" unless enable_byobu
 puts "we're happy to help as needed and get you any information you're looking for"
-puts "have a look at our wiki: https://tilde.club/wiki/ (ctrl-click will let you open that from here)"
+puts "have a look at our wiki: https://tilde.fur/wiki/ (ctrl-click will let you open that from here)"
 puts "if you need to run this wizard again, you can do so with the `firstlogin` command"
 File.delete("#{Dir.home}/.new_user")
 
